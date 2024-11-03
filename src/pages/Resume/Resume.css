@@ -1,0 +1,16 @@
+.resume {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .resume h2 {
+    color: var(--accent);
+    margin-bottom: 2rem;
+  }
+  
+  .resume-content {
+    background: var(--light);
+    padding: 2rem;
+    border-radius: 8px;
+  }
