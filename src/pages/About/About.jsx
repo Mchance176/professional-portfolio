@@ -45,14 +45,6 @@ function About() {
             <li>Other: Responsive Design, RESTful APIs</li>
           </ul>
         </div>
-
-        {/* Personal interests/additional info */}
-        <p className="personal">
-          When I'm not coding, I enjoy staying up-to-date with the latest 
-          web development trends and technologies. I'm always eager to learn 
-          new skills and take on challenging projects that push my boundaries 
-          as a developer.
-        </p>
       </div>
     </section>
   )
