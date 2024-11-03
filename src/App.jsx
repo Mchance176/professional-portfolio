@@ -1,35 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// Import React Router components for routing functionality
+import { Routes, Route } from 'react-router-dom'
+
+// Import individual components and pages
+import Header from './components/Header/Header'
+import About from './pages/About'
+import Portfolio from './pages/Portfolio'
+import Contact from './pages/Contact'
+import Resume from './pages/Resume'
+
+// Import styles
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    // Main container div that wraps entire application
+    <div className="app-container">
+      {/* Header component contains navigation menu */}
+      <Header />
+      
+      {/* Main content area where page components will render */}
+      <main className="main-content">
+        {/* Routes component to handle different page routes */}
+        <Routes>
+          {/* Default route (home page) */}
+          <Route path="/" element={<About />} />
+          
+          {/* Portfolio page route */}
+          <Route path="/portfolio" element={<Portfolio />} />
+          
+          {/* Contact page route */}
+          <Route path="/contact" element={<Contact />} />
+          
+          {/* Resume page route */}
+          <Route path="/resume" element={<Resume />} />
+        </Routes>
+      </main>
+    </div>
   )
 }
 
+// Export App component for use in main.jsx
 export default App
