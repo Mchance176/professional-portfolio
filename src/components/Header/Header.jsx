@@ -14,12 +14,11 @@ function Header() {
       {/* Centered content wrapper with max-width */}
       <div className="header-content">
         {/* Site title/logo */}
-        <h1>Your Name</h1>
+        <h1>Matthew Chance</h1>
         
         {/* Navigation menu */}
         <nav>
-          {/* Home/About link 
-              The className uses a ternary operator to add 'active' class when on this path */}
+          {/* Home/About link */}
           <Link 
             to="/" 
             className={location.pathname === '/' ? 'active' : ''}
@@ -56,5 +55,4 @@ function Header() {
   )
 }
 
-// Export the component for use in other parts of the application
-export default Header 
+export default Header
