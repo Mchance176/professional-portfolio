@@ -1,7 +1,8 @@
 .about {
-    padding: 2rem;
+    padding: 6rem 2rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    min-height: 100vh;
   }
   
   .about-container {
@@ -13,92 +14,124 @@
   
   .profile-section {
     text-align: center;
+    position: relative;
   }
   
   .profile-image {
     width: 250px;
     height: 250px;
-    border-radius: 50%;
+    border-radius: 15px;
     object-fit: cover;
     margin-bottom: 1.5rem;
-    border: 3px solid var(--accent);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--accent-primary);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .profile-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(100, 255, 218, 0.2);
   }
   
   .profile-section h2 {
-    color: var(--accent);
+    color: var(--accent-primary);
     margin-bottom: 0.5rem;
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   
   .title {
-    color: var(--secondary);
+    color: var(--text-secondary);
     font-size: 1.1rem;
     margin-bottom: 1rem;
   }
   
   .bio-section {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--card-bg);
     padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(100, 255, 218, 0.1);
   }
   
   .bio-section h3 {
-    color: var(--accent);
+    color: var(--accent-primary);
     margin-bottom: 1.5rem;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
   
   .bio-section p {
+    color: var(--text-secondary);
     margin-bottom: 1.5rem;
-    line-height: 1.6;
-  }
-  
-  .skills-overview {
-    margin-top: 2rem;
+    line-height: 1.8;
   }
   
   .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .skill-category {
+    background: rgba(17, 34, 64, 0.5);
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .skill-category:hover {
+    transform: translateY(-5px);
   }
   
   .skill-category h4 {
-    color: var(--secondary);
+    color: var(--accent-secondary);
     margin-bottom: 1rem;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
   
   .skill-category ul {
     list-style: none;
-    padding: 0;
   }
   
   .skill-category li {
-    margin-bottom: 0.5rem;
-    padding-left: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
     position: relative;
   }
   
   .skill-category li::before {
     content: "▹";
-    color: var(--accent);
+    color: var(--accent-primary);
     position: absolute;
     left: 0;
   }
   
+  /* Animation for page load */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .about-container {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
   /* Responsive Design */
   @media (max-width: 768px) {
+    .about {
+      padding: 5rem 1rem 1rem;
+    }
+  
     .about-container {
       grid-template-columns: 1fr;
       gap: 2rem;
-    }
-  
-    .profile-section {
-      margin-bottom: 2rem;
     }
   
     .profile-image {
@@ -108,10 +141,5 @@
   
     .bio-section {
       padding: 1.5rem;
-    }
-  
-    .skills-grid {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
     }
   }
