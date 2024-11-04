@@ -1,11 +1,13 @@
 :root {
-  --primary: #2d3436;
-  --secondary: #636e72;
-  --accent: #646cff;
-  --accent-dark: #535bf2;
-  --background: #242424;
-  --text: rgba(255, 255, 255, 0.87);
-  --light: #ffffff;
+  /* Modern Dark Theme Colors */
+  --bg-primary: #0a192f;
+  --bg-secondary: #112240;
+  --text-primary: #ccd6f6;
+  --text-secondary: #8892b0;
+  --accent-primary: #64ffda;
+  --accent-secondary: #ffd700;
+  --nav-hover: rgba(100, 255, 218, 0.1);
+  --card-bg: rgba(17, 34, 64, 0.7);
 }
 
 * {
@@ -15,18 +17,26 @@
 }
 
 body {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  color: var(--text);
-  background-color: var(--background);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
 }
 
-a {
-  text-decoration: none;
-  color: var(--accent);
+/* Modern Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-a:hover {
-  color: var(--accent-dark);
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-primary);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-secondary);
 }

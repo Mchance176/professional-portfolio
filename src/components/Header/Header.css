@@ -1,6 +1,11 @@
-header {
-  background-color: var(--primary);
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(10, 25, 47, 0.85);
+  backdrop-filter: blur(10px);
   padding: 1rem 2rem;
+  z-index: 1000;
 }
 
 .header-content {
@@ -11,30 +16,72 @@ header {
   align-items: center;
 }
 
+.logo {
+  color: var(--accent-primary);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: var(--accent-secondary);
+}
+
 nav {
   display: flex;
   gap: 2rem;
 }
 
 nav a {
-  color: var(--light);
+  color: var(--text-primary);
   text-decoration: none;
   padding: 0.5rem 1rem;
+  border-radius: 4px;
   transition: all 0.3s ease;
+  position: relative;
 }
 
-nav a:hover,
+nav a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-primary);
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--accent-primary);
+  background: var(--nav-hover);
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
 nav a.active {
-  color: var(--accent);
+  color: var(--accent-primary);
 }
 
+nav a.active::before {
+  width: 100%;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-  .header-content {
-    flex-direction: column;
-    gap: 1rem;
+  .header {
+    padding: 1rem;
   }
-  
+
   nav {
     gap: 1rem;
   }
-} 
+
+  nav a {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
