@@ -1,28 +1,117 @@
 .about {
-  display: flex;
-  gap: 2rem;
-  padding: 2rem;
-}
-
-.profile-image {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.about-content {
-  flex: 1;
-}
-
-.skills ul {
-  list-style: none;
-  padding-left: 1rem;
-}
-
-@media (max-width: 768px) {
-  .about {
-    flex-direction: column;
-    align-items: center;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
   }
-} 
+  
+  .about-container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  
+  .profile-section {
+    text-align: center;
+  }
+  
+  .profile-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    border: 3px solid var(--accent);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-section h2 {
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+  }
+  
+  .title {
+    color: var(--secondary);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .bio-section {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bio-section h3 {
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .bio-section p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+  
+  .skills-overview {
+    margin-top: 2rem;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+  
+  .skill-category h4 {
+    color: var(--secondary);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  
+  .skill-category ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .skill-category li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.2rem;
+    position: relative;
+  }
+  
+  .skill-category li::before {
+    content: "▹";
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-container {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  
+    .profile-section {
+      margin-bottom: 2rem;
+    }
+  
+    .profile-image {
+      width: 200px;
+      height: 200px;
+    }
+  
+    .bio-section {
+      padding: 1.5rem;
+    }
+  
+    .skills-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
