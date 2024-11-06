@@ -1,105 +1,66 @@
+import React from 'react'
 import './Resume.css'
 
 function Resume() {
-    // Define your skills
-    const skills = {
-        frontend: [
-            "HTML5", "CSS3", "JavaScript",
-            "React", "Bootstrap", "Responsive Design"
-        ],
-        backend: [
-            "Node.js", "Express", "MongoDB",
-            "MySQL", "RESTful APIs", "GraphQL"
-        ],
-        tools: [
-            "Git", "GitHub", "VS Code",
-            "npm", "Webpack", "Command Line"
-        ]
-    }
+  return (
+    <div className="resume">
+      <h2>Resume</h2>
+      
+      {/* Centered Resume Button */}
+      <div className="resume-view-section">
+        <a 
+          href="https://drive.google.com/file/d/1qwSz6z6Y6Xlg-gkOJhW7v4terbaZb2OK/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="view-resume-btn"
+        >
+          View Resume
+        </a>
+      </div>
 
-    return (
-        <section className="resume">
-            <h2>Resume</h2>
+      {/* Skills section */}
+      <div className="skills-section">
+        <h3>Technical Skills</h3>
+        <div className="skills-grid">
+          <div className="skill-category">
+            <h4>Front-End</h4>
+            <ul>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+              <li>React</li>
+              <li>Responsive Design</li>
+              <li>Bootstrap</li>
+            </ul>
+          </div>
 
-            {/* Download button */}
-            <div className="download-section">
-                <a
-                    href="/path-to-your-resume.pdf"
-                    download
-                    className="download-btn"
-                >
-                    Download Resume (PDF)
-                </a>
-            </div>
+          <div className="skill-category">
+            <h4>Back-End</h4>
+            <ul>
+              <li>Node.js</li>
+              <li>Express</li>
+              <li>MySQL</li>
+              <li>MongoDB</li>
+              <li>RESTful APIs</li>
+              <li>GraphQL</li>
+            </ul>
+          </div>
 
-            {/* Skills section */}
-            <div className="skills-section">
-                <h3>Technical Skills</h3>
-
-                <div className="skills-grid">
-                    {/* Frontend skills */}
-                    <div className="skill-category">
-                        <h4>Frontend Development</h4>
-                        <ul>
-                            {skills.frontend.map((skill, index) => (
-                                <li key={index}>{skill}</li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    {/* Backend skills */}
-                    <div className="skill-category">
-                        <h4>Backend Development</h4>
-                        <ul>
-                            {skills.backend.map((skill, index) => (
-                                <li key={index}>{skill}</li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    {/* Development tools */}
-                    <div className="skill-category">
-                        <h4>Development Tools</h4>
-                        <ul>
-                            {skills.tools.map((skill, index) => (
-                                <li key={index}>{skill}</li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            {/* Experience section */}
-            <div className="experience-section">
-                <h3>Professional Experience</h3>
-
-                <div className="experience-item">
-                    <h4>Job Title</h4>
-                    <p className="company">Company Name</p>
-                    <p className="date">Month Year - Present</p>
-                    <ul>
-                        <li>Achievement or responsibility 1</li>
-                        <li>Achievement or responsibility 2</li>
-                        <li>Achievement or responsibility 3</li>
-                    </ul>
-                </div>
-
-                {/* Add more experience items as needed */}
-            </div>
-
-            {/* Education section */}
-            <div className="education-section">
-                <h3>Education</h3>
-
-                <div className="education-item">
-                    <h4>Degree Name</h4>
-                    <p className="school">School Name</p>
-                    <p className="date">Graduation Year</p>
-                    <p>Relevant coursework or achievements</p>
-                </div>
-            </div>
-        </section>
-    )
+          <div className="skill-category">
+            <h4>Tools & Platforms</h4>
+            <ul>
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>VS Code</li>
+              <li>Command Line</li>
+              <li>Heroku</li>
+              <li>npm</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default Resume
