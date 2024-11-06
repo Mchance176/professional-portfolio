@@ -20,7 +20,7 @@ function Contact() {
           <div className="contact-method">
             <i className="fas fa-envelope"></i>
             <h3>Email</h3>
-            <a href="mailto:your.email@example.com">your.email@example.com</a>
+            <a href="mailto:matt.chance176@gmail.com">matt.chance176@gmail.com</a>
           </div>
 
           {/* LinkedIn */}
@@ -41,7 +41,7 @@ function Contact() {
             <i className="fab fa-github"></i>
             <h3>GitHub</h3>
             <a 
-              href="https://github.com/your-username" 
+              href="https://github.com/Mchance176" 
               target="_blank" 
               rel="noopener noreferrer"
             >
