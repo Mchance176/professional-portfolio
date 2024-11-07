@@ -21,11 +21,11 @@ function Portfolio() {
             deployedLink: "#" // Add your deployed link
         },
         {
-            title: "Work Day Scheduler",
-            description: "A simple calendar app for scheduling your work day.",
+            title: "Salary Tracker",
+            description: "A simple way to track employees pay.",
             image: "https://via.placeholder.com/400x200?text=Work+Day+Scheduler",
             technologies: ["HTML", "CSS", "JavaScript", "jQuery"],
-            githubLink: "#", // Add your GitHub link
+            githubLink: "https:github.com/Mchance176/Salary--Tracker",
             deployedLink: "#" // Add your deployed link
         },
         {
