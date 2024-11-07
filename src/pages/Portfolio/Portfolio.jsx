@@ -53,7 +53,7 @@ function Portfolio() {
             deployedLink: "#" // Add your deployed link
         }
 
-        // Add more as you complete them
+        // Add more as projects are completed
     ]
 
     return (
