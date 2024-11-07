@@ -1,0 +1,85 @@
+# Matthew Chance's Professional Portfolio
+
+## Description
+
+A modern, responsive portfolio website built with React and Vite, showcasing my web development projects and skills. This portfolio features a clean, professional design with smooth navigation and interactive elements.
+
+## Features
+
+- **Responsive Design**: Fully responsive layout that works on desktop, tablet, and mobile devices
+- **Modern UI**: Clean and professional interface with smooth transitions and hover effects
+- **Project Showcase**: Highlighting my development work with:
+  - Training App/Avatar Virtual Training Dynamics
+  - Links to both live deployments and GitHub repositories
+  - Technology stack tags for each project
+- **Skills Section**: Comprehensive display of technical skills including:
+  - Front-End Technologies
+  - Back-End Technologies
+  - Development Tools
+- **Resume Access**: Direct link to view and download my professional resume
+- **Contact Information**: Multiple ways to connect including:
+  - Email
+  - LinkedIn
+  - GitHub
+
+## Technologies Used
+
+- React
+- Vite
+- CSS3
+- JavaScript
+- React Router
+- Font Awesome Icons
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone [https://github.com/Mchance176/professional-portfolio]
+```
+
+2. Navigate to the project directory:
+```bash
+cd professional-portfolio
+```
+
+3. Install dependencies:
+```bash
+npm install
+```
+
+4. Start the development server:
+```bash
+npm run dev
+```
+
+## Usage
+
+Visit the deployed site at: [http://localhost:3000/resume]
+
+Navigate through the portfolio using the header navigation menu to explore:
+- About Me
+- Portfolio
+- Resume
+- Contact
+
+## Screenshots
+
+[Add screenshots of your portfolio here]
+
+## Future Enhancements
+
+- Add more project showcases
+- Implement project filtering by technology
+- Add a blog section
+- Enhance contact form functionality
+
+## Contact
+
+- GitHub: [https://github.com/Mchance176]
+- LinkedIn: []
+- Email: [matt.chance176@gmail.com]
+
+## License
+
+MIT License - see LICENSE file for details
