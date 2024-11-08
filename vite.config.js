@@ -3,16 +3,13 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
+  base: '/professional-portfolio/',
   server: {
     port: 3000,
     open: true
   },
-  assetsInclude: ['*.pdf'], // Changed this line
+  assetsInclude: ['*.pdf'],
   build: {
-    rollupOptions: {
-      output: {
-        assetFileNames: 'assets/[name][extname]'
-      }
-    }
+    outDir: 'dist'
   }
 })
